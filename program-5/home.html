@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dress Search</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots">
+<style>
+        body{
+          background-image:url("image11.jpg");
+          background-size: cover;
+        }
+  /* Custom styles */
+  .search-container {
+    margin-top: 150px;
+    text-align: center;
+  }
+  
+  .result-container {
+    display: none;
+    margin-top:50px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+        <button><a href="C:\Users\amees\Desktop\program-5\wed.html">home</a></button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <!-- Search Form -->
+      <form id="searchForm" class="search-container">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search for a dress...">
+        <button type="submit" class="btn btn-primary mt-2">Search</button>
+      </form>
+      <!-- Result Container -->
+      <div id="result" class="result-container">
+        <h2>Dress Details</h2>
+        <p id="dressDetails"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+  var searchTerm = document.getElementById('searchInput').value;
+  // Here, you would typically send the search term to your backend and get the dress details
+  // For now, let's just display a placeholder result
+  displayResult("Sample Dress Details for: " + searchTerm);
+});
+
+function displayResult(details) {
+  var resultContainer = document.getElementById('result');
+  var detailsElement = document.getElementById('dressDetails');
+  detailsElement.innerHTML = details;
+  resultContainer.style.display = 'block';
+}
+</script>
+</body>
+</html>
